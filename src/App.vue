@@ -1,19 +1,14 @@
 <template>
-  <ion-app>
-    <div>
-    <ion-datetime></ion-datetime>
-    </div>
-  </ion-app>
+  <ion-datetime></ion-datetime>
 </template>
 
 <script lang="ts">
-import { IonApp, IonDatetime } from '@ionic/vue';
+import { IonDatetime } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    IonApp,
     IonDatetime
   }
 });
