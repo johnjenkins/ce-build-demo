@@ -1,0 +1,7 @@
+{
+  "name": "ce-child-dep",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
