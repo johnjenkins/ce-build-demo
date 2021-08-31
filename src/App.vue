@@ -1,15 +1,18 @@
 <template>
-  <ion-datetime></ion-datetime>
+  <ion-app>
+    <ion-button size="large" expand="full" @click="handleClick" mode="md">nice!</ion-button>
+  </ion-app>
 </template>
 
 <script lang="ts">
-import { IonDatetime } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'App',
-  components: {
-    IonDatetime
+  methods: {
+    handleClick() {
+      console.log('nice') 
+    }
   }
 });
 </script>

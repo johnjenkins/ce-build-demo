@@ -1,8 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import { IonicVue } from '@ionic/vue';
-
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
 
@@ -22,6 +20,17 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import { initialize } from '@ionic/core/components';
+import { IonButton } from '@ionic/core/components/ion-button';
+import { IonApp } from '@ionic/core/components/ion-app';
+
+initialize({mode: 'md'})
+if (!customElements.get('ion-app')) {
+  customElements.define('ion-app', IonApp);
+}
+if (!customElements.get('ion-button')) {
+  customElements.define('ion-button', IonButton);
+}
+
 createApp(App)
-  .use(IonicVue)
   .mount('#app');
