@@ -21,16 +21,12 @@ import '@ionic/vue/css/display.css';
 import './theme/variables.css';
 
 import { initialize } from '@ionic/core/components';
-import { IonButton } from '@ionic/core/components/ion-button';
-import { IonApp } from '@ionic/core/components/ion-app';
+import { defineCustomElements as btnDef } from '@ionic/core/components/ion-button';
+import { defineCustomElements as appDef } from '@ionic/core/components/ion-app';
 
 initialize({mode: 'md'})
-if (!customElements.get('ion-app')) {
-  customElements.define('ion-app', IonApp);
-}
-if (!customElements.get('ion-button')) {
-  customElements.define('ion-button', IonButton);
-}
+btnDef();
+appDef();
 
 createApp(App)
   .mount('#app');
